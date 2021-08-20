@@ -1,0 +1,15 @@
+.card {
+    width: 24rem;
+    margin-bottom: 2%;
+    background-color: #474B4F;
+    box-shadow: 2px 2px 3px 2px black;
+    color: white;
+}
+
+#time-posted {
+    float: right;
+}
+
+.text-muted {
+    color: #61892F !important;
+}
