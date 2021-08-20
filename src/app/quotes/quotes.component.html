@@ -2,9 +2,15 @@
     <h1>
         {{title | titlecase }}
     </h1>
+    <hr>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-9"></div>
+            <div class="col-md-9">
+                <div *ngFor='let quote of quotes'>
+                    {{quote.name}}
+                    <app-quotes-details [quote]='quote'></app-quotes-details>
+                </div>
+            </div>
             <div class="col-md-3"></div>
         </div>
     </div>
