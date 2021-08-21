@@ -1,0 +1,33 @@
+.add-quotes{
+    background-color: #6B6E70;
+    border-radius: 4px;
+    padding: 5%;
+  }
+
+
+h2 {
+    font-family: 'Special Elite', cursive;
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
+
+form {
+    color: white;
+    padding: 7px;
+}
+
+form label {
+    margin-top: 10px;
+    color: #86c232;
+    font-size: 15px;
+}
+
+.btn {
+    background-color: #86c232;
+    border: #61892F;
+    margin-top: 18px;
+    color: #474B4F;
+}
