@@ -1,16 +1,18 @@
-<div class="overlay">
-  <h1>
-    {{ title | titlecase }}
-  </h1>
-  <hr />
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-9">
-        <div class="quotes" *ngFor="let quote of quotes" let i =index>  
-/          <app-quotes-details [quote]="quote"></app-quotes-details>
+<div class="container-fluid">
+  <div class="overlay">
+    <h1>
+      {{ title | titlecase }}
+    </h1>
+    <hr />
+      <div class="row">
+        <div class="col-md-9">
+          <div class="quotes" *ngFor="let quote of quotes" let i="index">
+            <app-quotes-details [quote]="quote"></app-quotes-details>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <app-quotes-form></app-quotes-form>
         </div>
       </div>
-      <div class="col-sm-3"></div>
-    </div>
   </div>
 </div>
