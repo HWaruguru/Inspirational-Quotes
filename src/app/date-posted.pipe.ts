@@ -7,8 +7,8 @@ export class DatePostedPipe implements PipeTransform {
 
   transform(value: any, args?: Date): string {
     if (value) {
-        const seconds = Math.floor((+new Date() - +new Date(value)) / 1000);
-        if (seconds < 29) // less than 30 seconds ago will show as 'Just now'
+        const seconds = Math.floor((+new Date() - value) / 1000);
+        if (seconds < 29) 
             return 'Just now';
         const intervals: any = {
             'year': 31536000,
@@ -24,9 +24,9 @@ export class DatePostedPipe implements PipeTransform {
             counter = Math.floor(seconds / intervals[j]);
             if (counter > 0)
                 if (counter === 1) {
-                    return counter + ' ' + j + ' ago'; // singular (1 day ago)
+                    return counter + ' ' + j + ' ago'; 
                 } else {
-                    return counter + ' ' + j + 's ago'; // plural (2 days ago)
+                    return counter + ' ' + j + 's ago';
                 }
         }
     }

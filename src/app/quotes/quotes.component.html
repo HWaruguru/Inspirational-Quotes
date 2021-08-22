@@ -20,24 +20,7 @@
                 </footer>
               </blockquote>
             </div>
-            <div class="card-footer">
-              <small class="text-muted"
-                >Written by: {{ quote.name }}
-                <span id="time-posted"
-                  >Posted: {{ quote.datePosted | datePosted }}</span
-                ></small
-              >
-              <span class="text-muted vote">
-                <span class="vote"
-                  ><i class="fa fa-fw fa-thumbs-up"></i>
-                  {{ quote.upvotes }}</span
-                >
-                <span class="vote"
-                  ><i class="fa fa-fw fa-thumbs-down"></i>
-                  {{ quote.downvotes }}</span
-                >
-              </span>
-            </div>
+            <app-quotes-details [quote]='quote'></app-quotes-details>
           </div>
         </div>
       </div>
