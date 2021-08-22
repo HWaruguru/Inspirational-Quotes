@@ -15,6 +15,10 @@
     color: #61892F !important;
 }
 
+.quote-footer {
+    font-size: 20px;
+}
+
 .downvote {
     margin-left: 15px;
     color: tomato;

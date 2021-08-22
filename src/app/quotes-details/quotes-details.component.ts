@@ -1,5 +1,5 @@
 
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Quote } from '../quotes';
 
 @Component({
@@ -9,22 +9,21 @@ import { Quote } from '../quotes';
 })
 export class QuotesDetailsComponent implements OnInit {
   @Input() quote!: Quote;
+  @Output() upvoteQuote = new EventEmitter<Quote>();
 
-    // updateQuoteWithHighestVotes() {
-    //     const quoteVotes = this.quotes.map((quote) => quote.upvotes)
-    //     const idx = quoteVotes.indexOf(Math.max(...quoteVotes))
-    //     this.quotes = this.quotes.map((quote) => { return { ...quote, popular: false } })
-    //     this.quotes[idx].popular = true
-    // }
+  upVoteQuote() {
+    this.upvoteQuote.emit();
 
-    upvote() {
-        this.quote.upvotes += 1
-        // this.updateQuoteWithHighestVotes()
-    }
+  }
 
-    downvote() {
-        this.quote.downvotes += 1
-    }
+  upvote() {
+    this.quote.upvotes += 1
+    this.upVoteQuote()
+  }
+
+  downvote() {
+    this.quote.downvotes += 1
+  }
 
   constructor() { }
 

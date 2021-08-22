@@ -7,20 +7,20 @@
     <div class="row">
       <div class="col-sm-9">
         <div class="quotes">
-          <div class="card" *ngFor="let quote of quotes">
+          <div class="card" *ngFor="let quote of quotes" [appHighlight]="quote.popular">
             <div class="card-body">
               <blockquote class="blockquote mb-0">
                 <p class="card-text">
                   {{ quote.quote }}
                 </p>
                 <footer class="blockquote-footer">
-                  <small class="text-muted">
+                  <small class="text-muted author">
                     {{ quote.author }}
                   </small>
                 </footer>
               </blockquote>
             </div>
-            <app-quotes-details [quote]='quote'></app-quotes-details>
+            <app-quotes-details [quote]='quote' (upvoteQuote)='updateQuoteWithHighestVotes()'></app-quotes-details>
           </div>
         </div>
       </div>
