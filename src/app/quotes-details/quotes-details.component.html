@@ -4,11 +4,11 @@
     </small
   >
   <span class="text-muted vote">
-    <span class="upvote"
+    <span class="upvote" (click)="upvote()"
       ><i class="fa fa-fw fa-thumbs-up"></i>
       {{ quote.upvotes }}</span
     >
-    <span class="downvote"
+    <span class="downvote" (click)="downvote()"
       ><i class="fa fa-fw fa-thumbs-down"></i>
       {{ quote.downvotes }}</span>
   </span>

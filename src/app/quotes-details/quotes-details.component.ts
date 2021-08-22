@@ -17,14 +17,14 @@ export class QuotesDetailsComponent implements OnInit {
     //     this.quotes[idx].popular = true
     // }
 
-    // upvote(idx: number) {
-    //     this.quotes[idx].upvotes += 1
-    //     this.updateQuoteWithHighestVotes()
-    // }
+    upvote() {
+        this.quote.upvotes += 1
+        // this.updateQuoteWithHighestVotes()
+    }
 
-    // downvote(idx: number) {
-    //     this.quotes[idx].downvotes += 1
-    // }
+    downvote() {
+        this.quote.downvotes += 1
+    }
 
   constructor() { }
 
