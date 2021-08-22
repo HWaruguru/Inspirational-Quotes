@@ -16,4 +16,5 @@ export class Quote {
         this.upvotes = upvotes;
         this.downvotes = downvotes;
     }
+    public popular: boolean = false;
 }

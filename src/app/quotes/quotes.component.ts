@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Quote } from '../quotes';
 
 @Component({
@@ -17,9 +17,15 @@ export class QuotesComponent implements OnInit {
     new Quote(6, 'Wanyenze', 'And now these three remain: faith, hope and love. But the greatest of these is love.', 'The Holy Bible', new Date(2021,8,20), 0, 0),
   ];
 
+  addNewQuote(quote: Quote){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    quote.datePosted = new Date(quote.datePosted)
+    this.quotes.push(quote)
+  }
   constructor() { }
 
   ngOnInit() {
-  }
 
+  }
 }

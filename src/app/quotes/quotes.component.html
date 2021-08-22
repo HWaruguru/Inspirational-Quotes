@@ -6,12 +6,12 @@
     <hr />
       <div class="row">
         <div class="col-md-9">
-          <div class="quotes" *ngFor="let quote of quotes" let i="index">
+          <div class="quotes" *ngFor="let quote of quotes">
             <app-quotes-details [quote]="quote"></app-quotes-details>
           </div>
         </div>
         <div class="col-md-3">
-          <app-quotes-form></app-quotes-form>
+          <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
         </div>
       </div>
   </div>
