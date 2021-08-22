@@ -4,15 +4,46 @@
       {{ title | titlecase }}
     </h1>
     <hr />
-      <div class="row">
-        <div class="col-md-9">
-          <div class="quotes" *ngFor="let quote of quotes">
-            <app-quotes-details [quote]="quote"></app-quotes-details>
+    <div class="row">
+      <div class="col-sm-9">
+        <div class="quotes">
+          <div class="card" *ngFor="let quote of quotes">
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p class="card-text">
+                  {{ quote.quote }}
+                </p>
+                <footer class="blockquote-footer">
+                  <small class="text-muted">
+                    {{ quote.author }}
+                  </small>
+                </footer>
+              </blockquote>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted"
+                >Written by: {{ quote.name }}
+                <span id="time-posted"
+                  >Posted: {{ quote.datePosted | datePosted }}</span
+                ></small
+              >
+              <span class="text-muted vote">
+                <span class="vote"
+                  ><i class="fa fa-fw fa-thumbs-up"></i>
+                  {{ quote.upvotes }}</span
+                >
+                <span class="vote"
+                  ><i class="fa fa-fw fa-thumbs-down"></i>
+                  {{ quote.downvotes }}</span
+                >
+              </span>
+            </div>
           </div>
         </div>
-        <div class="col-md-3">
-          <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
-        </div>
       </div>
+      <div class="col-sm-3">
+        <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
+      </div>
+    </div>
   </div>
 </div>
