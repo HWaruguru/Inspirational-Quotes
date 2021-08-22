@@ -1,9 +1,14 @@
 
 
-#time-posted {
+.vote {
     float: right;
 }
 
 .text-muted {
     color: #61892F !important;
+}
+
+.downvote {
+    margin-left: 15px;
+    color: tomato;
 }
