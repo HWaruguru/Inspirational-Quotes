@@ -18,7 +18,7 @@ No known bugs at the moment
 * CSS
 * Bootstrap
 * JavaScript
-*TypeScript
+* TypeScript
 
 ### License
 * MIT
