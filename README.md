@@ -4,8 +4,8 @@ An insipirational quotes application that allows users to read and add quotes. U
 
 ## Setup/Installation Requirements
 * Clone this repo to your machine 
-* `git clone `
-* `cd into insoirational-Quotes`
+* `git clone https://github.com/HWaruguru/Inspirational-Quotes.git`
+* `cd into inspirational-Quotes`
 * Navigate to index.html  and open it on your favorite browser
 Your browser must be JavaScript and Angular enabled for this to work
 
