@@ -33,3 +33,11 @@
   color: #61892F !important;
   font-size: 18px;
 }
+
+.delete-quote {
+  float: right;
+  margin: 4px;
+  font-size: 18px;
+  color: tomato;
+  cursor: pointer;
+}
